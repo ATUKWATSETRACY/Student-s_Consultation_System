@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+    <!-- ChatBot -->
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.convform.css">
+    <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.convform.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+
+</head>
+
+<body>
+    <iframe allow="microphone;" width="350" height="430" src="https://console.dialogflow.com/api-client/demo/embedded/31acd5cb-17f6-418b-a0a6-c587a49e01b5">
+</iframe>
+
+
+
+    <script type="text/javascript">
+        portfolioList = document.querySelectorAll('.portfolio-box');
+        portfolioList.forEach(function(portfolioPic) {
+            portfolioPic.addEventListener('click', function() {
+                bg = this.style.backgroundImage;
+                document.getElementById('port_pop_pic_bg').classList.add("active")
+                document.getElementById('port_pop_pic').style.backgroundImage = bg
+                document.getElementById('port_pop_pic').classList.add("active")
+            });
+        })
+        document.getElementById('port_pop_pic_bg').addEventListener('click', function() {
+            document.getElementById('port_pop_pic_bg').classList.remove("active")
+            document.getElementById('port_pop_pic').classList.remove("active")
+        })
+    </script>
+
+</body>
+
+</html>
